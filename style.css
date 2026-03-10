@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    
+    background: #000;
+}
+
+
+.elements{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.elem{
+  border-bottom: 1px solid #fff;
+  padding: 5rem;
+  position: relative;
+  
+}
+.elem h1{
+    position: relative;
+    font-size: 3rem;
+    z-index: 9;
+    mix-blend-mode: difference;
+    font-family: 'Arial', sans-serif;
+}
+
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    --x: 0px; /* Initial value for the x-coordinate variable*/
+    --y: 0px; /* Initial value for the y-coordinate*/
+    --scale: 0.96;
+    transform: translate3d(var(--x), var(--y), 0) translate(-50%, -50%) scale(var(--scale));
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+    -moz-transition: opacity 0.3s ease, -moz-transform 0.3s ease;
+    -ms-transition: opacity 0.3s ease, -ms-transform 0.3s ease;
+    -o-transition: opacity 0.3s ease, -o-transform 0.3s ease;
+    will-change: transform, opacity;
+    pointer-events: none;
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.45));
+    -webkit-transform: translate3d(var(--x), var(--y), 0) translate(-50%, -50%) scale(var(--scale));
+    -moz-transform: translate3d(var(--x), var(--y), 0) translate(-50%, -50%) scale(var(--scale));
+    -ms-transform: translate3d(var(--x), var(--y), 0) translate(-50%, -50%) scale(var(--scale));
+    -o-transform: translate3d(var(--x), var(--y), 0) translate(-50%, -50%) scale(var(--scale));
+}
+
+.elem.is-active img{
+    opacity: 0.85;
+    --scale: 1;
+}
+
+
